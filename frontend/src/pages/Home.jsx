@@ -6,6 +6,7 @@ import axios from "axios";
 const Home = ({ search, category }) => {
     const navigate = useNavigate();
     const [listing,setlisting]=useState([]);
+
 const handleDelete = async (id) => {
   const confirmDelete = window.confirm(
     'Are you sure you want to delete this listing?'
@@ -22,7 +23,7 @@ const handleDelete = async (id) => {
     setlisting((prev) => prev.filter((post) => post._id !== id));
   } catch (error) {
     console.log(error.message);
-    alert('Failed to delete listing.');
+    alert('you are not the owner of listing ! you are not allowed to delete it');
   }
 };
 const handleEdit = (id) => {
