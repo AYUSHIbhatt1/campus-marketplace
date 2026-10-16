@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const API = 'http://localhost:5000/api/listings';
+const API = `${import.meta.env.VITE_API_URL}/api/listings`;
 
 const EditListing = () => {
   const { id } = useParams();

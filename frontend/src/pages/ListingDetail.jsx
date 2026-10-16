@@ -18,7 +18,7 @@ const ListingDetails = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/listings/${id}`
+          `${import.meta.env.VITE_API_URL}/api/listings/${id}`
         );
 
         setListing(response.data.post);

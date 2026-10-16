@@ -15,7 +15,7 @@ const handleDelete = async (id) => {
 
   try {
     await axios.delete(
-  `http://localhost:5000/api/listings/${id}`,
+  `${import.meta.env.VITE_API_URL}/api/listings/${id}`,
   { withCredentials: true }
 );
 
@@ -34,7 +34,7 @@ useEffect(()=>{
 async function getdata(){
     try{
 const response = await axios.get(
-    "http://localhost:5000/api/listings"
+    `${import.meta.env.VITE_API_URL}/api/listings`
 );
 
 setlisting(response.data.post)

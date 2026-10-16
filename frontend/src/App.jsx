@@ -18,7 +18,7 @@ function App() {
 const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
 useEffect(() => {
-    axios.get('http://localhost:5000/api/auth/me', {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/auth/me `, {
         withCredentials: true
     })
     .then(() => setIsLoggedIn(true))

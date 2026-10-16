@@ -53,7 +53,7 @@ const AddListing = () => {
       }
 
       await axios.post(
-        'http://localhost:5000/api/listings',
+        `${import.meta.env.VITE_API_URL}/api/listings`,
         data,
         {
           withCredentials: true,
