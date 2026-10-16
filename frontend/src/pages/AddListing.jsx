@@ -210,7 +210,7 @@ const AddListing = () => {
                   <input
                     id="image"
                     type="file"
-                    accept="image/*"
+                    accept=".png,.jpg,.jpeg,image/png,image/jpeg"
                     onChange={handleImageChange}
                     className="sr-only"
                   />
