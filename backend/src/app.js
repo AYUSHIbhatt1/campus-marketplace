@@ -6,7 +6,7 @@ const router = require('../routes/listingRoutes');
 const authRoutes = require('../routes/authRoutes');
 const app = express();
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://campus-marketplace-1-826i.onrender.com",
     credentials: true
 }));
 
