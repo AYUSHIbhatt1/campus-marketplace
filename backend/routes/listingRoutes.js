@@ -183,7 +183,7 @@ router.patch('/:id',authMiddleware, async (req, res) => {
 );
         if (!post) {
             return res.status(404).json({
-                message: 'Post not found'
+                message: 'you are not the owner of this Listing you are not allowed to edit'
             });
         }
 
